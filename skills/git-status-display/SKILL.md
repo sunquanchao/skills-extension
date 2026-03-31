@@ -1,6 +1,6 @@
 ---
 name: git-status-display
-description: Display current git branch and working directory. Use this skill whenever user says "where am i", "where am I", "what directory", "current directory", "pwd", "what branch", "current branch", "git branch", "what's my git status", "show git info", "show status", or asks about location/branch. ALWAYS use before ANY git operation (commit, push, pull, merge, branch, checkout). Also trigger when user wants to know their current location, project path, or repository context. This is a simple status display - use it whenever the user needs context about where they are or what branch they're on.
+description: Display current git branch and working directory. Use this skill whenever user says "where am i", "where am I", "wai", "what directory", "current directory", "pwd", "what branch", "current branch", "git branch", "what's my git status", "show git info", "show status", or asks about location/branch. ALWAYS use before ANY git operation (commit, push, pull, merge, branch, checkout). Also trigger when user wants to know their current location, project path, or repository context. This is a simple status display - use it whenever the user needs context about where they are or what branch they're on.
 ---
 
 # Git Status Display
@@ -10,7 +10,7 @@ Quickly show the current git branch and working directory.
 ## When to Use
 
 **ALWAYS use this skill when user says:**
-- "where am i", "where am I", "where am I working"
+- "where am i", "where am I", "where am I working", "wai"
 - "what directory", "current directory", "pwd", "what's the directory"
 - "what branch", "current branch", "git branch", "what branch am i on"
 - "what's my git status", "show git info", "show status"
