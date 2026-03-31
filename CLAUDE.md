@@ -69,7 +69,7 @@ openspec archive "<name>"
 
 ### Change Directory Structure
 
-```
+```text
 openspec/changes/<change-name>/
 ├── .openspec.yaml          # Change metadata
 ├── proposal.md             # What & why
@@ -122,6 +122,7 @@ metadata:      # optional
 ### Schema-Driven Workflow
 
 The `openspec/config.yaml` defines the schema (currently `spec-driven`). The schema determines:
+
 - Which artifacts are required
 - Artifact dependencies
 - What's required before implementation can start (`apply.requires`)
@@ -129,6 +130,7 @@ The `openspec/config.yaml` defines the schema (currently `spec-driven`). The sch
 ### Artifact Dependency Resolution
 
 When creating or implementing changes:
+
 1. Always check `openspec status --change "<name>" --json` for current state
 2. Parse `applyRequires` array to know what's needed before implementation
 3. Parse `artifacts` array for dependency relationships
@@ -137,6 +139,7 @@ When creating or implementing changes:
 ### Context and Rules
 
 When running `openspec instructions <artifact-id> --change "<name>" --json`:
+
 - `context` and `rules` are constraints for YOU, not content for the artifact file
 - Never copy `<context>`, `<rules>`, or `<project_context>` blocks into output files
 - Use `template` as the structure for your output
@@ -166,6 +169,7 @@ When running `openspec instructions <artifact-id> --change "<name>" --json`:
 ## Spec-Driven Schema Details
 
 The `spec-driven` schema requires these artifacts before implementation:
+
 - `proposal.md` - What changes and why
 - `design.md` - Technical approach
 - `tasks.md` - Step-by-step implementation with checkboxes
@@ -174,18 +178,21 @@ The `spec-driven` schema requires these artifacts before implementation:
 ## Guardrails
 
 ### Explore Mode
+
 - NEVER write implementation code
 - MAY create OpenSpec artifacts (that's capturing thinking, not implementing)
 - Use diagrams, questions, codebase investigation
 - Offer to capture insights, don't auto-capture
 
 ### Propose Mode
+
 - Create ALL artifacts needed for implementation (`apply.requires`)
 - Read dependency artifacts before creating new ones
 - Don't copy `context`/`rules` into output files
 - Use `template` as structure
 
 ### Apply Mode
+
 - Read context files before starting (from `openspec instructions apply --json`)
 - Mark tasks complete immediately after finishing each: `- [ ]` → `- [x]`
 - Keep changes minimal and scoped to each task
@@ -194,7 +201,7 @@ The `spec-driven` schema requires these artifacts before implementation:
 
 ## File References
 
-- **Agent Skills specification**: See [spec/agent-skills-spec.md](spec/agent-skills-spec.md) (now at https://agentskills.io/specification)
+- **Agent Skills specification**: See [spec/agent-skills-spec.md](spec/agent-skills-spec.md) (now at <https://agentskills.io/specification>)
 - **OpenSpec config**: [openspec/config.yaml](openspec/config.yaml)
 - **Skills template**: [template/SKILL.md](template/SKILL.md)
 - **Example change**: [openspec/changes/enhance-git-status-triggers/](openspec/changes/enhance-git-status-triggers/)

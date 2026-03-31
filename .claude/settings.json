@@ -6,7 +6,8 @@
       "Edit(/.claude/skills/openspec-explore/**)",
       "Edit(/.claude/skills/openspec-propose/**)",
       "Edit(/.claude/skills/openspec-apply-change/**)",
-      "Edit(/.claude/skills/openspec-archive-change/**)"
+      "Edit(/.claude/skills/openspec-archive-change/**)",
+      "Bash(ls -la *.md LICENSE)"
     ]
   }
 }
