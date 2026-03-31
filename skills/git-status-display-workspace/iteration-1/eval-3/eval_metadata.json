@@ -1,0 +1,6 @@
+{
+  "eval_id": 3,
+  "eval_name": "commit-changes-context",
+  "prompt": "I want to commit my changes",
+  "assertions": []
+}

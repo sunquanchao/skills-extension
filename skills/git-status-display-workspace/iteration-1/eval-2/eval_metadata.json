@@ -1,0 +1,6 @@
+{
+  "eval_id": 2,
+  "eval_name": "show-current-dir-and-git",
+  "prompt": "Show me the current working directory and git info",
+  "assertions": []
+}

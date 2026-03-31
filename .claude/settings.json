@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find . -name *.py -type f)",
+      "Bash(xargs grep:*)",
+      "Edit(/.claude/skills/openspec-explore/**)",
+      "Edit(/.claude/skills/openspec-propose/**)",
+      "Edit(/.claude/skills/openspec-apply-change/**)",
+      "Edit(/.claude/skills/openspec-archive-change/**)"
+    ]
+  }
+}

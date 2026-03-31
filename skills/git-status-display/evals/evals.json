@@ -1,0 +1,145 @@
+{
+  "skill_name": "git-status-display",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "What branch am I on?",
+      "expected_output": "Should display current git branch and working directory in single-line format: 'Branch: <branch> | Dir: <path>'",
+      "files": [],
+      "assertions": [
+        {
+          "name": "output_contains_branch",
+          "description": "Output should contain 'Branch:' followed by a branch name",
+          "check_type": "text_contains",
+          "expected": "Branch:"
+        },
+        {
+          "name": "output_contains_dir",
+          "description": "Output should contain '| Dir:' followed by a path",
+          "check_type": "text_contains",
+          "expected": "| Dir:"
+        },
+        {
+          "name": "single_line_format",
+          "description": "Output should be brief (under 200 characters)",
+          "check_type": "length_check",
+          "expected": "max_200_chars"
+        },
+        {
+          "name": "cross_platform_paths",
+          "description": "Should handle both Unix (/path/to/dir) and Windows (C:\\path\\to\\dir or /c/path/to/dir) path formats",
+          "check_type": "path_format_check",
+          "expected": "valid_path_format"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Show me the current working directory and git info",
+      "expected_output": "Should display current git branch and working directory in single-line format: 'Branch: <branch> | Dir: <path>'",
+      "files": [],
+      "assertions": [
+        {
+          "name": "output_contains_branch",
+          "description": "Output should contain 'Branch:' followed by a branch name",
+          "check_type": "text_contains",
+          "expected": "Branch:"
+        },
+        {
+          "name": "output_contains_dir",
+          "description": "Output should contain '| Dir:' followed by a path",
+          "check_type": "text_contains",
+          "expected": "| Dir:"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "I want to commit my changes",
+      "expected_output": "Should show the status display (branch and directory) before proceeding with commit operation, using brief single-line format",
+      "files": [],
+      "assertions": [
+        {
+          "name": "shows_status_before_commit",
+          "description": "Should show branch/dir info before proceeding with commit",
+          "check_type": "text_contains",
+          "expected": "Branch:"
+        },
+        {
+          "name": "proceeds_with_commit",
+          "description": "Should proceed to help with commit operation",
+          "check_type": "text_contains",
+          "expected": "commit"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "What's my current git status?",
+      "expected_output": "Should display branch and directory in brief format. Optionally include brief uncommitted changes summary if git status was run",
+      "files": [],
+      "assertions": [
+        {
+          "name": "output_contains_branch",
+          "description": "Output should contain 'Branch:'",
+          "check_type": "text_contains",
+          "expected": "Branch:"
+        },
+        {
+          "name": "output_contains_dir",
+          "description": "Output should contain '| Dir:'",
+          "check_type": "text_contains",
+          "expected": "| Dir:"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Where am I in the project?",
+      "expected_output": "Should display branch and directory information in single-line format",
+      "files": [],
+      "assertions": [
+        {
+          "name": "output_contains_branch",
+          "description": "Output should contain 'Branch:'",
+          "check_type": "text_contains",
+          "expected": "Branch:"
+        },
+        {
+          "name": "output_contains_dir",
+          "description": "Output should contain '| Dir:'",
+          "check_type": "text_contains",
+          "expected": "| Dir:"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Show me git status on macOS",
+      "expected_output": "Should work correctly on macOS with Unix-style paths",
+      "files": [],
+      "assertions": [
+        {
+          "name": "handles_macos_paths",
+          "description": "Should display Unix-style paths on macOS",
+          "check_type": "text_contains",
+          "expected": "Branch:"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "What's my directory on Windows?",
+      "expected_output": "Should work on Windows with either native paths (C:\\path) or Git Bash paths (/c/path)",
+      "files": [],
+      "assertions": [
+        {
+          "name": "handles_windows_paths",
+          "description": "Should accept Windows path formats",
+          "check_type": "text_contains",
+          "expected": "| Dir:"
+        }
+      ]
+    }
+  ]
+}
