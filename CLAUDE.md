@@ -2,9 +2,13 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Project Disclaimer
+
+**This is an independent, unofficial extension and is NOT an official Anthropic product.** This repository is maintained by Quanchao Sun and is not endorsed by or affiliated with Anthropic. It extends the work from [github.com/anthropics/skills](https://github.com/anthropics/skills) with additional skills and the experimental OpenSpec workflow system.
+
 ## Repository Overview
 
-This is the **Anthropic Skills Extension** repository - a collection of Claude skills and an experimental OpenSpec workflow system. The repository contains:
+This is the **Skills Extension** repository - an independent collection of Claude skills and an experimental OpenSpec workflow system. The repository contains:
 
 - **[skills/](skills/)** - Example skills that demonstrate the Claude skills system
 - **[openspec/](openspec/)** - Experimental spec-driven workflow for managing changes with artifacts (proposal, design, tasks, specs)
@@ -100,13 +104,15 @@ metadata:      # optional
 - **[.claude/skills/](.claude/skills/)** - Built-in OpenSpec workflow skills
 - **[template/SKILL.md](template/SKILL.md)** - Template for creating new skills
 
-### Installing This Repository as a Plugin
+### Installing the Official Anthropic Skills Repository as a Plugin
+
+**Note:** The commands below are for the official Anthropic skills repository, not this independent extension.
 
 ```bash
-# Add marketplace
+# Add the official Anthropic marketplace
 /plugin marketplace add anthropics/skills
 
-# Install skill sets
+# Install skill sets from the official repository
 /plugin install document-skills@anthropic-agent-skills
 /plugin install example-skills@anthropic-agent-skills
 ```
