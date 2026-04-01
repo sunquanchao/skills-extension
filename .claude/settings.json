@@ -8,6 +8,9 @@
       "Edit(/.claude/skills/openspec-apply-change/**)",
       "Edit(/.claude/skills/openspec-archive-change/**)",
       "Bash(ls -la *.md LICENSE)"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\86158\\.claude\\projects\\e--ws-python-skills-extension"
     ]
   }
 }
