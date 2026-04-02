@@ -7,7 +7,9 @@
       "Edit(/.claude/skills/openspec-propose/**)",
       "Edit(/.claude/skills/openspec-apply-change/**)",
       "Edit(/.claude/skills/openspec-archive-change/**)",
-      "Bash(ls -la *.md LICENSE)"
+      "Bash(ls -la *.md LICENSE)",
+      "Edit(~/.claude/skills/git-status-display/**)",
+      "Bash(openspec archive:*)"
     ],
     "additionalDirectories": [
       "C:\\Users\\86158\\.claude\\projects\\e--ws-python-skills-extension"
